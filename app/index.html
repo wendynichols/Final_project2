@@ -23,19 +23,41 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+    <div class="wrapper">
+      <div id="nav_container"></div>
+      <div class="container"></div>
     </div>
+    <div class="footer"></div>
+
+    <script type="text/template" id="nav">
+    <a href="#/"><h1>Final Project</h1></a>
+    <div class="navBar">
+    <% if(App.user == null){ %>
+      <button id="navLogin"></button>
+      <% } else { %>
+        <a id="navCreate" href="#/create">Create</a>
+        <a href="#/me">Me</a>
+        <button id="navLogin"></button>
+        <% } %>
+        </div>
+        </script>
+
+        <script type="text/template" id="logInForm">
+        <form id="logIn">
+        <h3 class="mainPage">Log In</h3>
+        <input id="username" type="text" placeholder="Enter User Name" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <button>Log In</button>
+        </form>
+        <form id="signUp">
+        <h3 class="mainPage">Sign Up</h3>
+        <input id="fullname" type="text" placeholder="Full Name" />
+        <input id="newUsername" type="text" placeholder="New Username" />
+        <input id="newPassword" type="password" placeholder="New Password" />
+        <button>Sign Up</button>
+        </form>
+        </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -44,7 +66,18 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+
+    <script type="text/javascript">
+      window.App = {};
+      App.Models = {};
+      App.Collections = {};
+      App.Views = {};
+      App.Routers = {};
+    </script>
+
         <!-- build:js scripts/main.js -->
+        <script src="scripts/collections/posts_collection.js"></script>
+        <script src="scripts/collections/comments_collection.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
