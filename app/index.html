@@ -58,6 +58,13 @@
         </form>
         </script>
 
+        <script type="text/template" id="commentTemp">
+        <li class="commentList">
+        <span class="commentAuthor"><a href="#/author/<%= user.objectId %>"><%= author %></a> commented:</span>
+        <p><%= commentText %></p>
+        </li>
+        </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -81,6 +88,13 @@
         <script src="scripts/models/comments_model.js"></script>
         <script src="scripts/collections/posts_collection.js"></script>
         <script src="scripts/collections/comments_collection.js"></script>
+        <script src="scripts/views/create_post_view.js"></script>
+        <script src="scripts/views/edit_post_view.js"></script>
+        <script src="scripts/views/login_view.js"></script>
+        <script src="scripts/views/my_posts_view.js"></script>
+        <script src="scripts/views/nav_view.js"></script>
+        <script src="scripts/views/public_posts_view.js"></script>
+        <script src="scripts/views/single_post_view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
