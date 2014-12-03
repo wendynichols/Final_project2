@@ -2,25 +2,187 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// Custom Styles
+// Variables
+
+// Standard Styles
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  font-size: 62.5%;
+  line-height: 30px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+h1, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+h1 {
+  letter-spacing: 3px;
+}
+h3 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: red;
+}
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  letter-spacing: 0;
+
+  &:hover {
+    color: green;
+  }
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.6em;
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: green;
+  }
+}
+input {
+  color: RGBA(99, 98, 93, 1);
+  background-color: white;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
+// Custom Styles
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.container {
+  @include outer-container;
+  max-width: 1000px;
+}
+
+nav {
+  @include outer-container;
+  max-width: 1000px;
+  padding: 40px 0 80px 0;
+  font-size: 1.6em;
+
   h1 {
-    font-size: 60px;
+    @include span-columns(6 of 12);
+    font-size: 75px;
+    font-weight: bold;
     line-height: 1;
     letter-spacing: -1px;
+    padding-top: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+
+  .navBar {
+    margin-top: 36px;
+    float: right;
+  }
+
+  a {
+    margin-right: 24px;
+  }
+}
+
+#navLogin {
+  color: white;
+  font-size: 1em;
+}
+
+#logIn, #signUp {
+  @include span-columns(6);
+  margin-top: 40px;
+  padding: 40px;
+  height: 360px;
+  border: solid HSLA(180, 3%, 89%, 1) 2px;
+  /* background-color: white; */
+  /* box-shadow: inset 0 1px 2px #777777, 0 2px 2px #666666; */
+
+  h3 {
+    margin-bottom: 20px;
+    color: green;
+  }
+
+  input {
+    @include span-columns(6 of 6);
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0 0 0 10px;
+    font-size: 1.6em;
+  }
+
+  button {
+    @include span-columns(6 of 6);
+    height: 60px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 2em;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background: url('');
+}
+
+
+// Comments
+
+#addComment {
+  text-color: green;
+  margin-top: 40px;
+  padding-top: 80px;
+}
+
+.commentHeader {
+  @include span-columns(12);
+  padding-top: 80px;
+  padding-bottom: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+}
+
+.comments {
+  @include span-columns(12);
+}
+
+.commentList {
+  border-bottom: 2px dotted red;
+  padding: 48px 0 32px 0;
+
+  .commentAuthor {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+}
+
+#commentText {
+  @include span-columns(12);
+  /* @include shift(2); */
+  height: 140px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+#addCommentButton {
+  @include span-columns(12);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
