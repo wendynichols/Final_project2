@@ -3,7 +3,7 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Variables
-
+$font: 'Dancing Script', cursive;
 // Standard Styles
 body {
   background: #fafafa;
@@ -85,7 +85,7 @@ nav {
     line-height: 1;
     letter-spacing: -1px;
     padding-top: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $font;
   }
 
   .navBar {
