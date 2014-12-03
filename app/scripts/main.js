@@ -8,11 +8,10 @@ Parse.initialize("itgnj31wh8MQhIxiy6OQwFWOlzeVWZt56SipOGe8", "eatOhuFjUvMG3BpmkK
   App.user = Parse.User.current();
 
   new App.Views.Nav({user: App.user});
-
-  App.posts.fetch().done(function () {
-    App.comments.fetch().done(function(){
-      App.router = new App.Routers.AppRouter();
-      Parse.history.start();
-    });
-  });
+   App.posts.fetch().done(function () {
+     App.comments.fetch().done(function(){
+       App.router = new App.Routers.AppRouter();
+       Parse.history.start();
+     });
+   });
 }());

@@ -53,9 +53,10 @@
       this.updateUser();
 
       this.initialize();
-
       App.router.navigate('login', {trigger: true});
-            
+      
+      // this.updateUser();
+
     }
 
   });
