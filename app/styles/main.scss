@@ -4,6 +4,7 @@
 
 // Variables
 $font: 'Dancing Script', cursive;
+$mainFont: 'Quattrocento Sans', sans-serif;
 // Standard Styles
 body {
   background: #fafafa;
@@ -39,9 +40,9 @@ a {
   font-weight: bold;
   letter-spacing: 0;
 
-  &:hover {
-    color: green;
-  }
+/*   &:hover {
+  color: green;
+} */
 }
 button {
   border: none;
@@ -49,11 +50,10 @@ button {
   font-size: 1.6em;
   background-color: red;
   color: white;
-  border-radius: 2px;
 
-  &:hover {
+  /* &:hover {
     background-color: green;
-  }
+  } */
 }
 input {
   color: RGBA(99, 98, 93, 1);
@@ -108,7 +108,7 @@ nav {
   margin-top: 40px;
   padding: 40px;
   height: 360px;
-  border: solid HSLA(180, 3%, 89%, 1) 2px;
+  border: solid 2px;
   /* background-color: white; */
   /* box-shadow: inset 0 1px 2px #777777, 0 2px 2px #666666; */
 
@@ -139,6 +139,78 @@ nav {
   width: 100%;
   height: 100px;
   background: url('');
+}
+// Public Posts
+
+.allPosts {
+  @include span-columns(12);
+
+  li {
+    margin-bottom: 40px;
+    padding-bottom: 56px;
+    border-bottom: 2px solid red;
+  }
+
+  li.draft h2{
+
+    &::after {
+      content:'(draft)' ;
+      font-size: 40%;
+      margin-left: 20px;
+      font-family: $mainFont;
+      color: green;
+    }
+  }
+
+  a {
+    font-size: 110%;
+  }
+
+  .textLink {
+    margin-left: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .postDetails {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
+}
+
+// Single Post
+
+#singleTitle {
+  text-align: center;
+  color: red;
+}
+
+#singleCopy {
+  text-align: justify;
+}
+
+#postAuthor {
+  font-size: 2em;
+  font-family: $mainFont;
+  display: inline-block;
+  margin-left: 12px;
+  margin-bottom: 20px;
+}
+
+.editPost {
+  padding-left: 10px;
+}
+
+.category {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 80px;
+  border-bottom: 3px solid green;
 }
 
 
@@ -185,4 +257,178 @@ nav {
   @include span-columns(12);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+
+// Create Post Page
+#createPost {
+  @include outer-container;
+}
+#title {
+  @include span-columns(6);
+  height: 35px;
+  font-size: 1.5em;
+  padding-left: 10px;
+  margin-bottom: 35px;
+  border: 1px solid green;
+}
+#copy {
+  @include span-columns(12);
+  display: block;
+  margin-bottom: 35px;
+  border: 1px solid green;
+  font-size: 1.5em;
+  padding-left: 10px;
+}
+
+.catSelect{
+  @include span-columns(4);
+}
+
+.catButtons{
+  @include span-columns(8);
+}
+
+#categories {
+  font-size: 2em;
+  width: 135px;
+}
+
+.postH3 {
+  @include span-columns(12);
+}
+
+#publish, #draft {
+  margin-top: 10px;
+  margin-left: 7px;
+  float: right;
+}
+
+@media (max-width: 750px){
+
+  #logIn, #signUp {
+    @include span-columns(12);
+    height: auto;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  nav {
+
+    h1 {
+      @include span-columns(3 of 12);
+      font-size: 2.8em;
+    }
+
+    a {
+      margin-right: 16px;
+    }
+
+    button {
+      padding: 6px 14px;
+    }
+  }
+
+  .allPosts {
+    text-align: center;
+
+    .textLink {
+      display: inline-block;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 16px;
+    }
+  }
+
+  .createForm {
+    /* text-align: center; */
+
+    .catButtons {
+      @include span-columns(6);
+
+      button {
+        @include span-columns(6 of 6);
+        margin: 0;
+      }
+    }
+
+    .catSelect {
+      @include span-columns(6);
+    }
+
+    button {
+      padding: 6px 14px;
+    }
+  }
+
+  #title {
+    @include span-columns(12);
+  }
+
+  #singleTitle {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+
+  #postAuthor {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px){
+
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  h2 {
+    font-size: 3.4em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  nav {
+
+    h1 {
+      @include span-columns(12);
+      text-align: center;
+    }
+
+    .navBar {
+      @include span-columns(12);
+      float: left;
+
+      a, button {
+        @include span-columns(4 of 12);
+        text-align: center;
+      }
+    }
+  }
+
+  .createForm {
+    text-align: center;
+
+    .catButtons {
+      @include span-columns(12);
+    }
+
+    .catSelect {
+      @include span-columns(12);
+    }
+  }
+
+  #postAuthor {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
 }
