@@ -291,18 +291,18 @@ nav {
 } */
 
 //keep these to keep the secret/publish buttons centered
- .catSelect{
-  @include span-columns(4);
-}
+/*  .catSelect{
+ @include span-columns(4);
+} */
 
 .catButtons{
   @include span-columns(8);
 }
 
-#categories {
+/* #categories {
   font-size: 2em;
   width: 135px;
-}
+} */
 
 .postH3 {
   @include span-columns(12);

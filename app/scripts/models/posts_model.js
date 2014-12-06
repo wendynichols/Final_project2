@@ -7,7 +7,6 @@
     defaults: {
       title: '',
       copy: '',
-      category: '',
       user: '',
       author: '',
       published: false

@@ -36,15 +36,15 @@ $(document).ready(function () {
       var image                    = $image[0];
       var start                    = Date.now();
       var color                    = colorThief.getColor(image);
-      var elapsedTimeForGetColor   = Date.now() - start;
+      // var elapsedTimeForGetColor   = Date.now() - start;
       var palette                  = colorThief.getPalette(image);
-      var elapsedTimeForGetPalette = Date.now() - start + elapsedTimeForGetColor;
+      // var elapsedTimeForGetPalette = Date.now() - start + elapsedTimeForGetColor;
 
       var colorThiefOutput = {
         color: color,
         palette: palette,
-        elapsedTimeForGetColor: elapsedTimeForGetColor,
-        elapsedTimeForGetPalette: elapsedTimeForGetPalette
+        // elapsedTimeForGetColor: elapsedTimeForGetColor,
+        // elapsedTimeForGetPalette: elapsedTimeForGetPalette
       };
       var colorThiefOuputHTML = Mustache.to_html($('#createPost').html(), colorThiefOutput);
 

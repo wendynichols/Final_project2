@@ -111,58 +111,57 @@
 
 
 
-
-
-        <script type="text/template" id="createPost">
+        <!-- <script type="text/template" id="createPost">
           <h3 class="postH3">Title</h3>
             <input type="text" id="title">
-          <h3 class="postH3">Board</h3>
+          <h3 class="postH3">Board</h3> -->
           <!--   <textarea id="copy" cols="30" rows="10"></textarea> -->
 
-          <section id="drag-drop" class="drag-drop-section">
-            <div class="dropImg">
-              <div id="drop-zone" class="drop-zone">
-                <div class="drop-zone-label default-label">Drop your image here</div>
-              </div>
-              <div id="dragged-images" class="dragged-images"></div>
-            </div>
-          </section>
-
-          <div class="catButtons">
-            <button id="publish">Publish Board</button>
-            <button id="draft">Keep it Secret</button>
+           <section id="drag-drop" class="drag-drop-section">
+        <div class="dropImg">
+          <div id="drop-zone" class="drop-zone">
+            <div class="drop-zone-label default-label">Drop your image here</div>
           </div>
-        </script>
+          <div id="dragged-images" class="dragged-images"></div>
+        </div>
+      </section>
+
+    <!--       <div class="catButtons">
+      <button id="publish">Show Everyone</button>
+      <button id="draft">Keep it Secret</button>
+    </div>
+            </script> -->
 
         <script id='createPost' type='text/x-mustache'>
-          {{#images}}
+        {{#images}}
           <div class="image-section {{class}}">
             <div class="image-wrap">
-              <img class="target-image" src="{{file}}" />
-            </div>
+            <img class="target-image" src="{{file}}" />
+              </div>
             <div class="color-thief-output"></div>
           </div>
           {{/images}}
         </script>
 
-        <script id="createPost" type="text/x-mustache">
-          <div class="function get-color">
-            <h3 class="function-title">Dominant Color</h3>
-            <div class="swatches">
-              <div class="swatch" style="background-color: rgb({{color.0}}, {{color.1}}, {{color.2}})"></div>
-            </div>
+
+    <!--     <script id="createPost" type="text/x-mustache">
+      <div class="function get-color">
+        <h3 class="function-title">Dominant Color</h3>
+        <div class="swatches">
+          <div class="swatch" style="background-color: rgb({{color.0}}, {{color.1}}, {{color.2}})"></div>
+        </div>
+      </div>
+      <div class="function get-palette">
+        <h3 class="function-title">Palette</h3>
+        <div class="function-output">
+          <div class="swatches">
+            {{#palette}}
+              <div class="swatch" style="background-color: rgb({{0}}, {{1}}, {{2}})"></div>
+            {{/palette}}
           </div>
-          <div class="function get-palette">
-            <h3 class="function-title">Palette</h3>
-            <div class="function-output">
-              <div class="swatches">
-                {{#palette}}
-                  <div class="swatch" style="background-color: rgb({{0}}, {{1}}, {{2}})"></div>
-                {{/palette}}
-              </div>
-            </div>
-          </div>
-        </script>
+        </div>
+      </div>
+    </script> -->
 
 
 
@@ -177,7 +176,7 @@
           <h3 class="postH3">Board</h3>
             <textarea id="copy" cols="30" rows="10"><%= copy %></textarea>
               <div class="catButtons">
-                <button id="publish">Publish Board</button>
+                <button id="publish">Show Everyone</button>
                 <button id="draft">Keep it Secret</button>
               </div>
         </script>
@@ -201,6 +200,7 @@
 
     <script type="text/javascript">
       window.App = {};
+      App.Extra = {};
       App.Models = {};
       App.Collections = {};
       App.Views = {};

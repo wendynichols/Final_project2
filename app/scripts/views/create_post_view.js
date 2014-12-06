@@ -10,8 +10,11 @@
     },
 
     template: _.template($('#createPost').html()),
+
     // template: _.template($('#image-section-template').html()),
     // template: _.template($('#color-thief-output-template').html()),
+
+    // var imageSectionHTML = Mustache.to_html($('#createPost').html(), imageInfo);
 
     initialize: function () {
 
