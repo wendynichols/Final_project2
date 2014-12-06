@@ -17,7 +17,6 @@
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/screen.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -109,18 +108,41 @@
                 <% } %>
         </script>
 
+
+
+
+
+
         <script type="text/template" id="createPost">
           <h3 class="postH3">Title</h3>
             <input type="text" id="title">
           <h3 class="postH3">Board</h3>
-            <textarea id="copy" cols="30" rows="10"></textarea>
-              <div class="catButtons">
-                <button id="publish">Publish Board</button>
-                <button id="draft">Keep it Secret</button>
+          <!--   <textarea id="copy" cols="30" rows="10"></textarea> -->
+
+          <section id="drag-drop" class="drag-drop-section">
+            <div class="dropImg">
+              <div id="drop-zone" class="drop-zone">
+                <div class="drop-zone-label default-label">Drop your image here</div>
               </div>
+              <div id="dragged-images" class="dragged-images"></div>
+            </div>
+          </section>
+
+          <div class="catButtons">
+            <button id="publish">Publish Board</button>
+            <button id="draft">Keep it Secret</button>
+          </div>
         </script>
 
-        <script type="text/template" id="editPost">
+
+
+
+
+
+
+
+
+      <script type="text/template" id="editPost">
           <h3 class="postH3">Title</h3>
             <input type="text" id="title" value="<%= title %>">
           <h3 class="postH3">Board</h3>

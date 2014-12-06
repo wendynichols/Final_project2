@@ -53,6 +53,7 @@ button {
   padding: 10px 20px;
   font-size: 1.6em;
   background-color: $peach;
+  border-radius: 2px;
 
    &:hover {
     background-color: $green;
@@ -280,14 +281,14 @@ nav {
   margin-bottom: 35px;
   border: 1px solid $green;
 }
-#copy {
+/* #copy {
   @include span-columns(12);
   display: block;
   margin-bottom: 35px;
-  border: 1px solid $green;
+  border: 1px solid \$green;
   font-size: 1.5em;
   padding-left: 10px;
-}
+} */
 
 //keep these to keep the secret/publish buttons centered
  .catSelect{
@@ -446,3 +447,134 @@ nav {
     font-size: 1.4em;
   }
 }
+//color pallette styles
+
+html{
+  font:87%/1.5 $mainFont;
+  font-weight:400}
+
+  @media (min-width: 40rem){
+    html{
+      font-size:100%}}
+
+      @media (min-width: 64rem){
+        html{
+          font-size:106%}}
+
+/* center the color pallette */
+section{
+  border-top:2px solid #e6e6e6;
+  text-align:center;
+  padding:1.5rem 0}
+
+  section:first-of-type{
+    border-top:none}
+
+    @media (min-width: 40rem){
+      section{padding:2rem 0}}
+
+/* makes the size of the container */
+.dropImg{
+  margin:0 auto;
+  max-width:40rem;
+  width:90%}
+
+/* sizes the dropped in img */
+.target-image{
+  display:block;
+  width:100%;
+  -moz-border-radius-topleft:8px;
+  -webkit-border-top-left-radius:8px;
+  border-top-left-radius:8px;
+  -moz-border-radius-topright:8px;
+  -webkit-border-top-right-radius:8px;
+  border-top-right-radius:8px}
+
+/* border around color pallette */
+.color-thief-output{
+  display:none;
+  padding:1.5rem;
+  background-color:#fff;
+  border:1px solid #e6e6e6;
+  border-top-width:0;
+  -moz-border-radius-bottomleft:8px;
+  -webkit-border-bottom-left-radius:8px;
+  border-bottom-left-radius:8px;
+  -moz-border-radius-bottomright:8px;
+  -webkit-border-bottom-right-radius:8px;
+  border-bottom-right-radius:8px}
+
+/* pulls in and sizes colors */
+.swatch{
+  display:inline-block;
+  margin:0;
+  background:#ddd}
+
+  @media (min-width: 40rem){
+    .swatch{
+      margin-right:-2px}}
+
+      .get-color .swatch{
+        width:6rem;
+        height:3rem}
+
+        .get-palette .swatch{
+          width:3rem;
+          height:2rem}
+
+          @media (min-width: 40rem){
+            .get-palette .swatch{
+              width:4rem;
+              height:2.7rem}}
+
+/* look of the whole section */
+.drop-zone{
+  @include span-columns(12);
+  height:25rem;
+  margin-bottom:4rem;
+  background-color: $green;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  -ms-border-radius:8px;
+  -o-border-radius:8px;
+  border-radius:5px}
+
+  .drop-zone.dragging{
+    font-weight:700;
+    -webkit-box-shadow:inset 0 0 0 8px #4ae;
+    -moz-box-shadow:inset 0 0 0 8px #4ae;
+    box-shadow:inset 0 0 0 8px #4ae}
+
+    .drop-zone.dragging .drop-zone-label{
+      color:#4ae}
+
+    .drop-zone.dragging .default-label{
+      display:none}
+
+    .drop-zone.dragging .dragging-label{
+      display:block}
+
+    .drop-zone-label{
+      position:relative;
+      top:11rem;
+      color: $peach;
+      font-size:1.8rem;
+      text-align:center;
+      pointer-events:none;
+      text-transform:uppercase;
+      -webkit-border-radius:8px;
+      -moz-border-radius:8px;
+      -ms-border-radius:8px;
+      -o-border-radius:8px;
+      border-radius:8px}
+
+    @media (min-width: 40rem){
+    .drop-zone-label{
+      top:10.5rem;
+      font-size:2.4rem}}
+
+    .dragging-label{
+      display:none}
+
+    .dropped-image .run-functions-button{
+      display:none}
