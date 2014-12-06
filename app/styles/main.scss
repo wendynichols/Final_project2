@@ -287,7 +287,8 @@ nav {
   padding-left: 10px;
 }
 
-/* .catSelect{
+//keep these to keep the secret/publish buttons centered
+ .catSelect{
   @include span-columns(4);
 }
 
@@ -298,16 +299,18 @@ nav {
 #categories {
   font-size: 2em;
   width: 135px;
-} */
+}
 
 .postH3 {
   @include span-columns(12);
 }
 
 #publish, #draft {
+  //@include span-columns(2);
   margin-top: 10px;
   margin-bottom: 100px;
   margin-left: 7px;
+  text-align: center;
   float: right;
   color: white;
   font-family: $mainFont;
