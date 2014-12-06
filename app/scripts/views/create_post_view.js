@@ -36,15 +36,12 @@
       else if($('#copy').val() === ""){
         alert("Don't create a blank post.");
       }
-      else if($('#categories option:selected').val() === ""){
-        alert("Please select a category");
-      }
+
       else{
 
         var p = new App.Models.Post({
           title: $('#title').val(),
           copy: $('#copy').val(),
-          category: $('#categories option:selected').val(),
           published: true,
           user: App.user,
           author: App.user.attributes.name
@@ -75,15 +72,12 @@
       else if($('#copy').val() === ""){
         alert("Don't create a blank post.");
       }
-      else if($('#categories option:selected').val() === ""){
-        alert("Please select a category");
-      }
+
       else{
 
         var p = new App.Models.Post({
           title: $('#title').val(),
           copy: $('#copy').val(),
-          category: $('#categories option:selected').val(),
           published: false,
           user: App.user,
           author: App.user.attributes.name
