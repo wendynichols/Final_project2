@@ -15,7 +15,7 @@ $(document).ready(function () {
     ]};
 
     // Render example images
-    var examplesHTML = Mustache.to_html($('#image-section-template').html(), imageArray);
+    var examplesHTML = Mustache.to_html($('#createPost').html(), imageArray);
     $('#example-images').append(examplesHTML);
 
     // Event handlers
@@ -46,7 +46,7 @@ $(document).ready(function () {
         elapsedTimeForGetColor: elapsedTimeForGetColor,
         elapsedTimeForGetPalette: elapsedTimeForGetPalette
       };
-      var colorThiefOuputHTML = Mustache.to_html($('#color-thief-output-template').html(), colorThiefOutput);
+      var colorThiefOuputHTML = Mustache.to_html($('#createPost').html(), colorThiefOutput);
 
       $imageSection.addClass('with-color-thief-output');
       $imageSection.find('.run-functions-button').addClass('hide');
@@ -109,7 +109,7 @@ $(document).ready(function () {
               {'class': 'dropped-image', file: event.target.result}
               ]};
 
-              var imageSectionHTML = Mustache.to_html($('#image-section-template').html(), imageInfo);
+              var imageSectionHTML = Mustache.to_html($('#createPost').html(), imageInfo);
               $draggedImages.prepend(imageSectionHTML);
 
               var $imageSection = $draggedImages.find('.image-section').first();
@@ -138,4 +138,3 @@ $(document).ready(function () {
       }
 
     });
-    

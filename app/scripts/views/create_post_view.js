@@ -10,6 +10,8 @@
     },
 
     template: _.template($('#createPost').html()),
+    // template: _.template($('#image-section-template').html()),
+    // template: _.template($('#color-thief-output-template').html()),
 
     initialize: function () {
 
