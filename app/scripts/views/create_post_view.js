@@ -10,11 +10,8 @@
     },
 
     template: _.template($('#createPost').html()),
+    template: _.template($('#colorPost').html()),
 
-    // template: _.template($('#image-section-template').html()),
-    // template: _.template($('#color-thief-output-template').html()),
-
-    // var imageSectionHTML = Mustache.to_html($('#createPost').html(), imageInfo);
 
     initialize: function () {
 
@@ -39,7 +36,7 @@
         alert('Please create a title for your post.');
       }
       else if($('#copy').val() === ""){
-        alert("Don't create a blank post.");
+        alert("Don't create a blank board.");
       }
 
       else{

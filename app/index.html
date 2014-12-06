@@ -110,8 +110,8 @@
 
 
 
-
-        <!-- <script type="text/template" id="createPost">
+<!--
+        <script type="text/template" id="createPost">
           <h3 class="postH3">Title</h3>
             <input type="text" id="title">
           <h3 class="postH3">Board</h3> -->
@@ -126,25 +126,25 @@
         </div>
       </section>
 
-    <!--       <div class="catButtons">
-      <button id="publish">Show Everyone</button>
-      <button id="draft">Keep it Secret</button>
-    </div>
-            </script> -->
+  <!--        <div class="catButtons">
+        <button id="publish">Show Everyone</button>
+        <button id="draft">Keep it Secret</button>
+      </div>
+          </script> -->
 
-        <script id='createPost' type='text/x-mustache'>
-        {{#images}}
-          <div class="image-section {{class}}">
-            <div class="image-wrap">
-            <img class="target-image" src="{{file}}" />
-              </div>
-            <div class="color-thief-output"></div>
-          </div>
-          {{/images}}
-        </script>
+       <script id='createPost' type='text/template'>
+       {{#images}}
+       <div class="image-section {{class}}">
+         <div class="image-wrap">
+         <img class="target-image" src="{{file}}" />
+           </div>
+         <div class="color-thief-output"></div>
+       </div>
+       {{/images}}
+            </script>
 
 
-    <!--     <script id="createPost" type="text/x-mustache">
+     <script id="colorPost" type="text/template">
       <div class="function get-color">
         <h3 class="function-title">Dominant Color</h3>
         <div class="swatches">
@@ -161,12 +161,7 @@
           </div>
         </div>
       </div>
-    </script> -->
-
-
-
-
-
+    </script>
 
 
 
