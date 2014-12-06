@@ -6,6 +6,9 @@
 $font: 'Dancing Script', cursive;
 $mainFont: 'Quattrocento Sans', sans-serif;
 
+$peach: RGBA(253, 200, 187, 1);
+$green: RGBA(12, 74, 57, 1);
+$orange: RGBA(219, 126, 48, 1);
 // Standard Styles
 body {
   background: #fafafa;
@@ -27,7 +30,7 @@ h1 {
 h3 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: red;
+  color: $peach;
 }
 ul, li {
   text-decoration: none;
@@ -37,27 +40,26 @@ ul, li {
 }
 a {
   text-decoration: none;
-  color: red;
+  color: $peach;
   font-weight: bold;
   letter-spacing: 0;
 
-/*   &:hover {
-  color: green;
-} */
+   &:hover {
+  color: $green;
+}
 }
 button {
   border: none;
   padding: 10px 20px;
   font-size: 1.6em;
-  background-color: red;
-  color: white;
+  background-color: $peach;
 
-  /* &:hover {
-    background-color: green;
-  } */
+   &:hover {
+    background-color: $green;
+  }
 }
 input {
-  color: black;
+  color: $green;
   background-color: white;
 }
 
@@ -107,15 +109,18 @@ nav {
 #logIn, #signUp {
   @include span-columns(6);
   margin-top: 40px;
+  margin-bottom: 100px;
   padding: 40px;
   height: 360px;
-  border: solid 2px;
-  /* background-color: white; */
+  border: solid 2px $peach;
+  font-family: $mainFont;
+  background: url('http://www.designlovefest.com/wp-content/uploads/downloads/2014/07/WatercolorFloralBorder_by_JulieSongInk1.jpg') ;
   /* box-shadow: inset 0 1px 2px #777777, 0 2px 2px #666666; */
 
   h3 {
     margin-bottom: 20px;
-    color: green;
+    color: $green;
+    text-align: center;
   }
 
   input {
@@ -130,7 +135,7 @@ nav {
     @include span-columns(6 of 6);
     height: 60px;
     border: none;
-    background-color: red;
+    background-color: $peach;
     color: white;
     font-size: 2em;
   }
@@ -139,7 +144,7 @@ nav {
 .footer {
   width: 100%;
   height: 100px;
-  background: url('');
+  background: url('http://www.designlovefest.com/wp-content/uploads/downloads/2014/07/WatercolorFloralBorder_by_JulieSongInk1.jpg');
 }
 // Public Posts
 
@@ -149,7 +154,7 @@ nav {
   li {
     margin-bottom: 40px;
     padding-bottom: 56px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid $orange;
   }
 
   li.draft h2{
@@ -159,7 +164,7 @@ nav {
       font-size: 40%;
       margin-left: 20px;
       font-family: $mainFont;
-      color: green;
+      color: $green;
     }
   }
 
@@ -186,7 +191,7 @@ nav {
 
 #singleTitle {
   text-align: center;
-  color: red;
+  color: $green;
 }
 
 #singleCopy {
@@ -211,14 +216,14 @@ nav {
   margin-top: 20px;
   text-align: center;
   padding-bottom: 80px;
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid $green;
 }
 
 
 // Comments
 
 #addComment {
-  text-color: green;
+  text-color: $green;
   margin-top: 40px;
   padding-top: 80px;
 }
@@ -227,7 +232,7 @@ nav {
   @include span-columns(12);
   padding-top: 80px;
   padding-bottom: 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $font;
   font-size: 3em;
 }
 
@@ -236,7 +241,7 @@ nav {
 }
 
 .commentList {
-  border-bottom: 2px dotted red;
+  border-bottom: 2px dotted $orange;
   padding: 48px 0 32px 0;
 
   .commentAuthor {
@@ -271,18 +276,18 @@ nav {
   font-size: 1.5em;
   padding-left: 10px;
   margin-bottom: 35px;
-  border: 1px solid green;
+  border: 1px solid $green;
 }
 #copy {
   @include span-columns(12);
   display: block;
   margin-bottom: 35px;
-  border: 1px solid green;
+  border: 1px solid $green;
   font-size: 1.5em;
   padding-left: 10px;
 }
 
-.catSelect{
+/* .catSelect{
   @include span-columns(4);
 }
 
@@ -293,7 +298,7 @@ nav {
 #categories {
   font-size: 2em;
   width: 135px;
-}
+} */
 
 .postH3 {
   @include span-columns(12);
@@ -301,8 +306,11 @@ nav {
 
 #publish, #draft {
   margin-top: 10px;
+  margin-bottom: 100px;
   margin-left: 7px;
   float: right;
+  color: white;
+  font-family: $mainFont;
 }
 
 @media (max-width: 750px){
