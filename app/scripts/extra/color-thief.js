@@ -97,10 +97,10 @@ ColorThief.prototype.getColor = function(sourceImage, quality) {
 ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality) {
 
   if (typeof colorCount === 'undefined') {
-    colorCount = 10;
+    colorCount = 5;
   }
   if (typeof quality === 'undefined') {
-    quality = 10;
+    quality = 5;
   }
 
   // Create custom CanvasImage object
