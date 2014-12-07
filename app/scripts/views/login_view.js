@@ -27,7 +27,7 @@
       var newUser = new Parse.User({
         username: $('#newUsername').val(),
         password: $('#newPassword').val(),
-        name: $('#fullname').val()
+        email: $('#email').val()
       });
 
       var l = $('#newUsername').val();

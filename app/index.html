@@ -46,18 +46,18 @@
     </script>
 
     <script type="text/template" id="logInForm">
+      <form id="signUp">
+        <h3 class="mainPage">Sign Up</h3>
+          <input id="email" type="email" placeholder="Email Address" />
+          <input id="newUsername" type="text" placeholder="New Username" />
+          <input id="newPassword" type="password" placeholder="New Password" />
+        <button>Sign Up</button>
+      </form>
       <form id="logIn">
         <h3 class="mainPage">Log In</h3>
           <input id="username" type="text" placeholder="Enter User Name" />
           <input id="password" type="password" placeholder="Enter Password" />
           <button>Log In</button>
-      </form>
-      <form id="signUp">
-        <h3 class="mainPage">Sign Up</h3>
-        <input id="fullname" type="text" placeholder="Full Name" />
-        <input id="newUsername" type="text" placeholder="New Username" />
-        <input id="newPassword" type="password" placeholder="New Password" />
-          <button>Sign Up</button>
       </form>
     </script>
 
@@ -135,15 +135,15 @@
 
 
        <script id='createPost' type='text/template'>
-       {{#images}}
-       <div class="image-section {{class}}">
-         <div class="image-wrap">
-         <img class="target-image" src="{{file}}" />
+         {{#images}}
+         <div class="image-section {{class}}">
+           <div class="image-wrap">
+           <img class="target-image" src="{{file}}" />
            </div>
-         <div class="color-thief-output"></div>
-       </div>
-       {{/images}}
-            </script>
+           <div class="color-thief-output"></div>
+         </div>
+         {{/images}}
+      </script>
 
 
      <script id="colorPost" type="text/template">
