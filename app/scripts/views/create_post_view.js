@@ -40,7 +40,7 @@
         alert('Please create a title for your board');
       }
       else if($('#copy').val() === ""){
-        alert("Don't create a blank board");
+        alert("Don't create an empty board");
       }
 
       else{
@@ -73,10 +73,10 @@
       e.preventDefault();
 
       if($('#title').val() === ""){
-        alert('Please create a title for your post.');
+        alert('Please create a title for your board');
       }
       else if($('#copy').val() === ""){
-        alert("Don't create a blank post.");
+        alert("Don't create an empty board");
       }
 
       else{

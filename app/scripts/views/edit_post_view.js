@@ -33,24 +33,21 @@
       e.preventDefault();
 
       if($('#title').val() === ""){
-        alert('Please create a title for your post.');
+        alert('Please create a title for your board');
       }
       else if($('#copy').val() === ""){
-        alert("Don't create a blank post.");
+        alert("Don't create a blank board.");
       }
-      else if($('#categories option:selected').val() === ""){
-        alert("Please select a category");
-      }
+
       else{
 
         this.options.post.set({
           title: $('#title').val(),
           copy: $('#copy').val(),
-          category: $('#categories option:selected').val(),
           published: true,
           user: App.user
         });
-        
+
 
         this.options.post.save(null, {
           success: function () {
@@ -67,7 +64,6 @@
       this.options.post.set({
         title: $('#title').val(),
         copy: $('#copy').val(),
-        category: $('#categories option:selected').val(),
         published: false,
         user: App.user
       });
