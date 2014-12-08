@@ -31,8 +31,7 @@
       this.$el.html(this.template());
 
       // function
-     var colorThief2;
-
+     colorThief2();
 
     },
 
