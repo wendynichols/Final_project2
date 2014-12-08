@@ -1,30 +1,32 @@
 /*! Modernizr 2.6.2 (Custom Build) | MIT & BSD
 * Build: http://modernizr.com/download/#-canvas-draganddrop-touch-shiv-cssclasses-teststyles-hasevent-prefixes-css_pointerevents-file_api-load
 */
-colorThief2 = function () {
+App.colorThief2 = function () {
+
+  console.log('hey hey');
 
   // ---------------------
   // Color Thief demo code
-  // ---------------------
-  var imageArray = {images: [
-    {'file': 'examples/img/photo1.jpg'},
-    {'file': 'examples/img/photo2.jpg'},
-    {'file': 'examples/img/photo3.jpg'}
-    ]};
+  // // ---------------------
+  // var imageArray = {images: [
+  //   {'file': 'examples/img/photo1.jpg'},
+  //   {'file': 'examples/img/photo2.jpg'},
+  //   {'file': 'examples/img/photo3.jpg'}
+  //   ]};
 
     // Render example images
     // var examplesHTML = Mustache.to_html($('#createPost').html(), imageArray);
     // $('#example-images').append(examplesHTML);
 
     // Event handlers
-    $('.run-functions-button').on('click', function(event) {
-      var $this = $(this);
-      $this.text('...');
-      var $imageSection     = $this.closest('.image-section');
-      var $colorThiefOutput = $imageSection.find('.color-thief-output');
-      var $targetimage      = $imageSection.find('.target-image');
-      showColorsForImage($targetimage, $imageSection);
-    });
+    // $('.run-functions-button').on('click', function(event) {
+    //   var $this = $(this);
+    //   $this.text('...');
+    //   var $imageSection     = $this.closest('.image-section');
+    //   var $colorThiefOutput = $imageSection.find('.color-thief-output');
+    //   var $targetimage      = $imageSection.find('.target-image');
+    //   showColorsForImage($targetimage, $imageSection);
+    // });
 
     var colorThief = new ColorThief();
 
@@ -107,7 +109,7 @@ colorThief2 = function () {
               {'class': 'dropped-image', file: event.target.result}
               ]};
 
-              var imageSectionHTML = Mustache.to_html($('#createPost').html(), imageInfo);
+              var imageSectionHTML = Mustache.to_html($('#testing').html(), imageInfo);
               $draggedImages.prepend(imageSectionHTML);
 
               var $imageSection = $draggedImages.find('.image-section').first();

@@ -11,7 +11,7 @@
 
 
 
-    template: _.template($('#createPost').html()),
+    template: $('#createPost').html(),
     template2: _.template($('#colorPost').html()),
 
 
@@ -27,10 +27,9 @@
 
       $(".container").empty();
 
-      this.$el.html(this.template());
+      this.$el.html(this.template);
 
-      // function
-     colorThief2();
+       setTimeout( function () { App.colorThief2(); });
 
     },
 
