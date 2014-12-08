@@ -9,8 +9,11 @@
       'click #draft' : 'draftPost'
     },
 
+
+
     template: _.template($('#createPost').html()),
-    template: _.template($('#colorPost').html()),
+    template2: _.template($('#colorPost').html()),
+    //template: _.template($('#drag-drop').html()),
 
 
     initialize: function () {
@@ -27,16 +30,20 @@
 
       this.$el.html(this.template());
 
+      // function
+     var colorThief2;
+
+
     },
 
     createPost: function(e){
       e.preventDefault();
 
       if($('#title').val() === ""){
-        alert('Please create a title for your post.');
+        alert('Please create a title for your board');
       }
       else if($('#copy').val() === ""){
-        alert("Don't create a blank board.");
+        alert("Don't create a blank board");
       }
 
       else{
