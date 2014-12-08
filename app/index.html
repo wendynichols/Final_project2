@@ -106,42 +106,39 @@
               <button id="addCommentButton">Add Comment</button>
           </form>
                 <% } %>
-        </script>
+      </script>
 
-
-
-
-        <script type="text/template" id="createPost">
+      <script type="text/template" id="createPost">
         <h3 class="postH3">Title</h3>
           <input type="text" id="title">
         <h3 class="postH3">New Board</h3>
-          <!--   <textarea id="copy" cols="30" rows="10"></textarea> -->
+        <!--   <textarea id="copy" cols="30" rows="10"></textarea> -->
 
-           <section id="drag-drop" class="drag-drop-section">
-     <div class="dropImg">
-       <div id="drop-zone" class="drop-zone">
-         <div class="drop-zone-label default-label">Drop your image here</div>
-       </div>
-       <div id="dragged-images" class="dragged-images"></div>
-     </div>
-              </section>
+        <section id="drag-drop" class="drag-drop-section">
+         <div class="dropImg">
+           <div id="drop-zone" class="drop-zone">
+             <div class="drop-zone-label default-label">Drop your image here</div>
+           </div>
+           <div id="dragged-images" class="dragged-images"></div>
+         </div>
+        </section>
 
-         <div class="catButtons">
-    <button id="publish">Show Everyone</button>
-    <button id="draft">Keep it Secret</button>
-          </div>
+        <div class="catButtons">
+          <button id="publish">Show Everyone</button>
+          <button id="draft">Keep it Secret</button>
+        </div>
       </script>
 
 
-       <script id='createPost' type='text/template'>
-         {{#images}}
+      <script id='createPost' type='text/template'>
+        {{#images}}
          <div class="image-section {{class}}">
            <div class="image-wrap">
            <img class="target-image" src="{{file}}" />
            </div>
            <div class="color-thief-output"></div>
          </div>
-         {{/images}}
+        {{/images}}
       </script>
 
      <script id="colorPost" type="text/template">
@@ -165,24 +162,24 @@
 
 
 
-      <script type="text/template" id="editPost">
-          <h3 class="postH3">Title</h3>
-            <input type="text" id="title" value="<%= title %>">
-          <h3 class="postH3">Board</h3>
-            <textarea id="copy" cols="30" rows="10"><%= copy %></textarea>
-              <div class="catButtons">
-                <button id="publish">Show Everyone</button>
-                <button id="draft">Keep it Secret</button>
-              </div>
-        </script>
+    <script type="text/template" id="editPost">
+        <h3 class="postH3">Title</h3>
+          <input type="text" id="title" value="<%= title %>">
+        <h3 class="postH3">Board</h3>
+          <textarea id="copy" cols="30" rows="10"><%= copy %></textarea>
+            <div class="catButtons">
+              <button id="publish">Show Everyone</button>
+              <button id="draft">Keep it Secret</button>
+            </div>
+      </script>
 
-        <script type="text/template" id="commentTemp">
-          <li class="commentList">
-            <span class="commentAuthor">
-              <a href="#/author/<%= user.objectId %>"><%= author %></a> commented:</span>
-              <p><%= commentText %></p>
-          </li>
-        </script>
+      <script type="text/template" id="commentTemp">
+        <li class="commentList">
+          <span class="commentAuthor">
+            <a href="#/author/<%= user.objectId %>"><%= author %></a> commented:</span>
+            <p><%= commentText %></p>
+        </li>
+      </script>
 
 
     <!-- build:js scripts/vendor.js -->

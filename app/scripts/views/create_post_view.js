@@ -13,7 +13,6 @@
 
     template: _.template($('#createPost').html()),
     template2: _.template($('#colorPost').html()),
-    //template: _.template($('#drag-drop').html()),
 
 
     initialize: function () {
