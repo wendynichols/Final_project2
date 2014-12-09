@@ -63,6 +63,7 @@ button {
 input {
   color: $green;
   background-color: white;
+  border-radius: 2px;
 }
 
 // Custom Styles
@@ -276,7 +277,8 @@ nav {
   @include outer-container;
 }
 #title {
-  @include span-columns(6);
+  @include span-columns(6 of 12);
+  @include shift(3);
   height: 35px;
   font-size: 1.5em;
   padding-left: 10px;

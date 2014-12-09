@@ -120,7 +120,7 @@
              <div class="drop-zone-label default-label">Drop your image here</div>
            </div>
            <div id="dragged-images" class="dragged-images"></div>
-         </div>
+           </div>
         </section>
 
         <div class="catButtons">
@@ -131,13 +131,13 @@
 
 
       <script id='testing' type='text/template'>
-        <div id="copy">
         {{#images}}
          <div class="image-section {{class}}">
            <div class="image-wrap">
+           <div id="copy">
            <img class="target-image" src="{{file}}" />
-           </div>
            <div class="color-thief-output"></div>
+           </div>
            </div>
         {{/images}}
         </div>
@@ -171,7 +171,7 @@
           <input type="text" id="title" value="<%= title %>">
         <h3 class="postH3">Board</h3>
 <!--           <textarea id="copy" cols="30" rows="10"><%= copy %></textarea>
- -->            <div class="catButtons">
+ -->             <div class="catButtons">
               <button id="publish">Show Everyone</button>
               <button id="draft">Keep it Secret</button>
             </div>
