@@ -7,12 +7,15 @@
     idAttribute: 'objectId',
 
     defaults: {
-      commentText: '',
+      title: '',
+      picture: '',
       user: '',
-      author: ''
-    }
+      author: '',
+      published: false
+    },
 
-  });
+    initialize: function () {}
 
+  })
 
 }());
