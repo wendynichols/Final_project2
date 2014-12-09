@@ -58,6 +58,24 @@ App.colorThief2 = function () {
       .on('drop', handleDrop);
     }
 
+    function saveImage(file, name) {
+      var parseFile = new Parse.File(name, file);
+      parseFile.save().then(function() {
+        console.log("woooo uploads!");
+      }, function(error) {
+        console.log("ruh roh");
+      });
+
+      var p = new App.Models.Picture({
+        // fixup these damn fields ya'll
+        picture: parseFile,
+        user: App.user,
+        title: $('#title').val(),
+        published: true,
+        author: App.user.attributes.name
+      });
+    }
+
     function handleFiles(files) {
       var $draggedImages = $('#dragged-images');
       var imageType      = /image.*/;
@@ -67,6 +85,9 @@ App.colorThief2 = function () {
         var file = files[i];
 
         if (file.type.match(imageType)) {
+          saveImage(file, file.name);
+
+
           var reader = new FileReader();
           reader.onload = function(event) {
             imageInfo = { images: [
