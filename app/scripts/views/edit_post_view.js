@@ -10,6 +10,8 @@
     },
 
     template: _.template($('#editPost').html()),
+    template2: _.template($('#colorPost').html()),
+    
 
     initialize: function (options) {
 

@@ -12,7 +12,7 @@ $orange: RGBA(219, 126, 48, 1);
 // Standard Styles
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $mainFont;
   color: #333;
   font-size: 62.5%;
   line-height: 30px;
@@ -29,6 +29,7 @@ h1 {
 }
 h3 {
   font-size: 3em;
+  font-family: $mainFont;
   margin-bottom: 20px;
   color: $peach;
 }
@@ -50,7 +51,7 @@ a {
 }
 button {
   border: none;
-  padding: 10px 20px;
+  padding: 8px 10px;
   font-size: 1.6em;
   background-color: $peach;
   border-radius: 2px;

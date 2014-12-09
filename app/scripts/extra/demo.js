@@ -20,8 +20,8 @@ App.colorThief2 = function () {
 
       setTimeout(function(){
         $imageSection.find('.color-thief-output').append(colorThiefOuputHTML).slideDown();
-        //var windowHeight          = $(window).height();
-        //var currentScrollPosition = $('body').scrollTop()
+        var windowHeight          = $(window).height();
+        var currentScrollPosition = $('body').scrollTop()
         var outputOffsetTop       = $imageSection.find('.color-thief-output').offset().top
         if ((currentScrollPosition < outputOffsetTop) && (currentScrollPosition + windowHeight - 250 < outputOffsetTop)) {
           $('body').animate({scrollTop: outputOffsetTop - windowHeight + 200 + "px"});
