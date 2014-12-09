@@ -48,10 +48,6 @@
           new App.Views.MyPosts({user: user[0]});
         }
       });
-    },
-
-    goToCategory: function(category){
-      new App.Views.Category({category: category});
     }
 
   });
