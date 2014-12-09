@@ -5,31 +5,23 @@ App.colorThief2 = function () {
     var colorThief = new ColorThief();
 
     // Run Color Thief functions and display results below image.
-    // We also log execution time of functions for display.
     var showColorsForImage = function($image, $imageSection ) {
       var image                    = $image[0];
-      var start                    = Date.now();
       var color                    = colorThief.getColor(image);
-      // var elapsedTimeForGetColor   = Date.now() - start;
       var palette                  = colorThief.getPalette(image);
-      // var elapsedTimeForGetPalette = Date.now() - start + elapsedTimeForGetColor;
 
       var colorThiefOutput = {
         color: color,
         palette: palette,
-        // elapsedTimeForGetColor: elapsedTimeForGetColor,
-        // elapsedTimeForGetPalette: elapsedTimeForGetPalette
       };
       var colorThiefOuputHTML = Mustache.to_html($('#colorPost').html(), colorThiefOutput);
 
       $imageSection.addClass('with-color-thief-output');
-      $imageSection.find('.run-functions-button').addClass('hide');
 
       setTimeout(function(){
         $imageSection.find('.color-thief-output').append(colorThiefOuputHTML).slideDown();
-        // If the color-thief-output div is not in the viewport or cut off, scroll down.
-        var windowHeight          = $(window).height();
-        var currentScrollPosition = $('body').scrollTop()
+        //var windowHeight          = $(window).height();
+        //var currentScrollPosition = $('body').scrollTop()
         var outputOffsetTop       = $imageSection.find('.color-thief-output').offset().top
         if ((currentScrollPosition < outputOffsetTop) && (currentScrollPosition + windowHeight - 250 < outputOffsetTop)) {
           $('body').animate({scrollTop: outputOffsetTop - windowHeight + 200 + "px"});
@@ -37,8 +29,6 @@ App.colorThief2 = function () {
       }, 300);
     };
 
-    // Drag'n'drop demo
-    // Thanks to Nathan Spady (http://nspady.com/) who did the bulk of the drag'n'drop work.
 
     // Setup the drag and drop behavior if supported
     if (Modernizr.draganddrop && !!window.FileReader && !isMobile()) {
@@ -101,7 +91,6 @@ App.colorThief2 = function () {
         }
       }
 
-      // This is not good practice. :-P
       function isMobile(){
         // if we want a more complete list use this: http://detectmobilebrowsers.com/
         // str.test() is more efficent than str.match()
