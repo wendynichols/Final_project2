@@ -238,7 +238,7 @@ nav {
 }
 
 .commentList {
-  border-bottom: 2px dotted $green;
+  border-bottom: 2px dotted $peach;
   padding: 48px 0 32px 0;
 
   .commentAuthor {
@@ -260,6 +260,7 @@ nav {
   @include span-columns(12);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  color: white;
 }
 
 
@@ -294,11 +295,6 @@ nav {
 .catButtons{
   @include span-columns(8);
 }
-
-/* #categories {
-  font-size: 2em;
-  width: 135px;
-} */
 
 .postH3 {
   @include span-columns(12);
@@ -354,26 +350,26 @@ nav {
     }
   }
 
-  .createForm {
-    /* text-align: center; */
+/*   .createForm {
+  text-align: center;
 
-    .catButtons {
-      @include span-columns(6);
-
-      button {
-        @include span-columns(6 of 6);
-        margin: 0;
-      }
-    }
-
-    .catSelect {
-      @include span-columns(6);
-    }
+  .catButtons {
+    @include span-columns(6);
 
     button {
-      padding: 6px 14px;
+      @include span-columns(6 of 6);
+      margin: 0;
     }
   }
+
+  .catSelect {
+    @include span-columns(6);
+  }
+
+  button {
+    padding: 6px 14px;
+  }
+} */
 
   #title {
     @include span-columns(12);
