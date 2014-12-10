@@ -29,7 +29,7 @@
 
       this.$el.html(this.template);
 
-       setTimeout( function () { App.colorThief2(); });
+      setTimeout( function () { App.colorThief2(); });
 
     },
 
@@ -47,7 +47,7 @@
 
         var p = new App.Models.Post({
           title: $('#title').val(),
-          copy: $('#copy').val(),
+          // copy: $('#copy').val(),
           published: true,
           user: App.user,
           author: App.user.attributes.name
@@ -83,7 +83,7 @@
 
         var p = new App.Models.Post({
           title: $('#title').val(),
-          copy: $('#copy').val(),
+          // copy: $('#copy').val(),
           published: false,
           user: App.user,
           author: App.user.attributes.name
