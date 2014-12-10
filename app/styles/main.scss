@@ -6,7 +6,7 @@
 $font: 'Dancing Script', cursive;
 $mainFont: 'Quattrocento Sans', sans-serif;
 
-$peach: RGBA(253, 200, 187, 1);
+$peach: RGBA(239, 148, 125, 1);
 $green: RGBA(12, 74, 57, 1);
 $orange: RGBA(219, 126, 48, 1);
 // Standard Styles
@@ -31,7 +31,7 @@ h3 {
   font-size: 3em;
   font-family: $mainFont;
   margin-bottom: 20px;
-  color: $peach;
+  color: $green;
 }
 ul, li {
   text-decoration: none;
@@ -41,23 +41,23 @@ ul, li {
 }
 a {
   text-decoration: none;
-  color: $peach;
+  color: $green;
   font-weight: bold;
   letter-spacing: 0;
 
    &:hover {
-  color: $green;
+  color: $peach;
 }
 }
 button {
   border: none;
   padding: 8px 10px;
   font-size: 1.6em;
-  background-color: $peach;
+  background-color: $green;
   border-radius: 2px;
 
    &:hover {
-    background-color: $green;
+    background-color: $peach;
   }
 }
 input {
@@ -160,7 +160,7 @@ nav {
   li {
     margin-bottom: 40px;
     padding-bottom: 56px;
-    border-bottom: 2px solid $orange;
+    border-bottom: 2px solid $peach;
   }
 
   li.draft h2{
@@ -216,15 +216,6 @@ nav {
   padding-left: 10px;
 }
 
-.category {
-  display: block;
-  font-size: 1.2em;
-  margin-top: 20px;
-  text-align: center;
-  padding-bottom: 80px;
-  border-bottom: 3px solid $green;
-}
-
 
 // Comments
 
@@ -247,7 +238,7 @@ nav {
 }
 
 .commentList {
-  border-bottom: 2px dotted $orange;
+  border-bottom: 2px dotted $green;
   padding: 48px 0 32px 0;
 
   .commentAuthor {
@@ -538,7 +529,7 @@ section{
   @include span-columns(12);
   height:25rem;
   margin-bottom:4rem;
-  background-color: $green;
+  background-color: $peach;
   -webkit-border-radius:8px;
   -moz-border-radius:8px;
   -ms-border-radius:8px;
