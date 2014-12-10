@@ -24,14 +24,15 @@
 
       e.preventDefault();
 
-      var newUser = new Parse.User({
-        username: $('#newUsername').val(),
-        password: $('#newPassword').val(),
-        email: $('#email').val()
-      });
-
       var l = $('#newUsername').val();
       var p = $('#newPassword').val();
+
+      var newUser = new Parse.User({
+        username: l,
+        password: p,
+        name: $('#author').val(),
+        email: $('#email').val()
+      });
 
       newUser.signUp(null, {
         success: function(){
