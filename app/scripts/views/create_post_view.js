@@ -10,7 +10,6 @@
     },
 
 
-
     template: $('#createPost').html(),
     template2: _.template($('#colorPost').html()),
 
@@ -39,9 +38,9 @@
       if($('#title').val() === ""){
         alert('Please create a title for your board');
       }
-      else if($('#copy').val() === ""){
-        alert("Don't create an empty board");
-      }
+      // else if($('#copy').val() === ""){
+      //   alert("Don't create an empty board");
+      // }
 
       else{
 
@@ -75,9 +74,9 @@
       if($('#title').val() === ""){
         alert('Please create a title for your board');
       }
-      else if($('#copy').val() === ""){
-        alert("Don't create an empty board");
-      }
+      // else if($('#copy').val() === ""){
+      //   alert("Don't create an empty board");
+      // }
 
       else{
 

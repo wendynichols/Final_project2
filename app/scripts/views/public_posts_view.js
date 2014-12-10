@@ -12,6 +12,7 @@
       this.options = options;
 
       this.render();
+      console.log(this.$el);
       $(".container").html(this.$el);
     },
 
@@ -25,7 +26,8 @@
       myPost_query.find({
         success: function(posts){
           _.each(posts, function(p) {
-            self.$el.append(self.template(p.toJSON()));
+            var rendered = self.template(p.toJSON());
+            self.$el.append(rendered);
           });
         }
       });

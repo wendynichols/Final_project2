@@ -62,38 +62,14 @@
     </script>
 
     <script type="text/template" id="postsList">
-      <% if(App.user !== null){ %>
-        <% if(App.user.id === user.objectId){ %>
-          <li <% if(published === false){ %>class="draft"<% } %> id="<%= objectId %>">
-            <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
-              <span class="postDetails">
-            <a href="#/author/<%= user.objectId %>"><%= author %></a>
-              posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
-            <a class="textLink" href="#/single/<%= objectId %>">Read Post</a>
-            <a class="textLink" href="#/edit/<%= objectId %>">Edit Post</a>
-              </span>
-          </li>
-            <% } else if(published === true){ %>
-          <li class="" id="<%= objectId %>">
-            <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
-              <span class="postDetails">
-            <a href="#/author/<%= user.objectId %>"><%= author %></a>
-              posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
-            <a class="textLink" href="#/single/<%= objectId %>">Read Post</a>
-              </span>
-          </li>
-            <% }} else { %>
-              <% if(published === true){ %>
-              <li class="" id="<%= objectId %>">
-                <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
-                <span class="postDetails">
-                <a href="#/author/<%= user.objectId %>"><%= author %></a>
-                posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
-                <a class="textLink" href="#/single/<%= objectId %>">Read Post</a>
-                </span>
-              </li>
-                <% }} %>
-      </script>
+      <li class="" id="<%= objectId %>">
+        <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
+          <span class="postDetails">
+            <a href="#/author/<%= user.id %>"><%= author %></a>
+            <!-- posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %> -->
+            </span>
+      </li>
+    </script>
 
       <script type="text/template" id="singlePost">
         <h2 id="singleTitle"><%= title %></h2>
@@ -190,6 +166,8 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    
     <!-- endbower -->
     <!-- endbuild -->
 

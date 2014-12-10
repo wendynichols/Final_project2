@@ -59,6 +59,7 @@ App.colorThief2 = function () {
   }
 
   function saveImage(file, name) {
+    console.log('oh my god it does sort of what we think');
     var parseFile = new Parse.File(name, file);
     parseFile.save().then(function() {
       console.log("woooo uploads!");
@@ -66,13 +67,20 @@ App.colorThief2 = function () {
       console.log("ruh roh");
     });
 
-    var p = new App.Models.Picture({
+    var i = new App.Models.Picture({
       // fixup these damn fields ya'll
       picture: parseFile,
       user: App.user,
       title: $('#title').val(),
       published: true,
       author: App.user.attributes.name
+    });
+
+    i.save(null, {
+      success: function () {
+        // App..add(i);
+        console.log('it saved!');
+      }
     });
   }
 
