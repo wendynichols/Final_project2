@@ -6,7 +6,6 @@
 
     defaults: {
       title: '',
-      copy: '',
       user: '',
       author: '',
       published: false

@@ -65,16 +65,18 @@
       <li class="" id="<%= objectId %>">
         <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
           <span class="postDetails">
-            <a href="#/name/<%= user.id %>"><%= name %></a>
-             posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
+          <span><%= user.picture %></span>
+
+<!--             <a href="#/author/<%= user.id %>"><%= name %></a>
+ -->             posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
             </span>
       </li>
     </script>
 
       <script type="text/template" id="singlePost">
         <h2 id="singleTitle"><%= title %></h2>
-          <a id="postAuthor" href="#/author/<%= user.objectId %>"> by <%= author %></a>
-            <p id="singleCopy"><%= copy %></p>
+          <a id="postAuthor" href="#/author/<%= user.objectId %>"> by <%= name %></a>
+            <p id="singleCopy"><%= objectId.picture %></p>
               <h3 class="commentHeader">Comments on "<%= title %>"</h3>
                 <% if(App.user != null){ %>
           <form id="addComment">

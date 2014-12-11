@@ -30,7 +30,7 @@
       var newUser = new Parse.User({
         username: l,
         password: p,
-        name: $('#name').val(),
+        name: $('#username').val(),
         email: $('#email').val()
       });
 
@@ -54,7 +54,7 @@
 
       e.preventDefault();
 
-      var l = $('#name').val();
+      var l = $('#username').val();
       var p = $('#password').val();
 
       Parse.User.logIn(l, p, {
