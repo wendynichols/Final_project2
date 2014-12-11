@@ -73,7 +73,7 @@ App.colorThief2 = function () {
       user: App.user,
       title: $('#title').val(),
       published: true,
-      author: App.user.attributes.name
+      name: App.user.attributes.name
     });
 
     i.save(null, {

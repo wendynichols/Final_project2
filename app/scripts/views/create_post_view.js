@@ -38,18 +38,14 @@
       if($('#title').val() === ""){
         alert('Please create a title for your board');
       }
-      // else if($('#copy').val() === ""){
-      //   alert("Don't create an empty board");
-      // }
-
+    
       else{
 
         var p = new App.Models.Post({
           title: $('#title').val(),
-          // copy: $('#copy').val(),
           published: true,
           user: App.user,
-          author: App.user.attributes.name
+          name: App.user.attributes.name
         });
 
         // Set Access Control List
@@ -85,7 +81,7 @@
           // copy: $('#copy').val(),
           published: false,
           user: App.user,
-          author: App.user.attributes.name
+          name: App.user.attributes.name
         });
 
         // Set Access Control List

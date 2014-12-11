@@ -65,8 +65,8 @@
       <li class="" id="<%= objectId %>">
         <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
           <span class="postDetails">
-            <a href="#/author/<%= user.id %>"><%= author %></a>
-            <!-- posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %> -->
+            <a href="#/name/<%= user.id %>"><%= name %></a>
+             posted on <%= moment(updatedAt).format('MMMM Do YYYY, h:mm a') %>
             </span>
       </li>
     </script>
@@ -88,8 +88,6 @@
         <h3 class="postH3">Title</h3>
           <input type="text" id="title">
         <h3 class="postH3">New Board</h3>
-        <!--   <textarea id="copy" cols="30" rows="10"></textarea> -->
-
         <section id="drag-drop" class="drag-drop-section">
          <div class="dropImg">
            <div id="drop-zone" class="drop-zone">
@@ -146,17 +144,16 @@
         <h3 class="postH3">Title</h3>
           <input type="text" id="title" value="<%= title %>">
         <h3 class="postH3">Board</h3>
-<!--           <textarea id="copy" cols="30" rows="10"><%= copy %></textarea>
- -->             <div class="catButtons">
-              <button id="publish">Show Everyone</button>
-              <button id="draft">Keep it Secret</button>
-            </div>
+          <div class="catButtons">
+            <button id="publish">Show Everyone</button>
+            <button id="draft">Keep it Secret</button>
+          </div>
       </script>
 
       <script type="text/template" id="commentTemp">
         <li class="commentList">
           <span class="commentAuthor">
-            <a href="#/author/<%= user.objectId %>"><%= author %></a> commented:</span>
+            <a href="#/name/<%= user.objectId %>"><%= name %></a> commented:</span>
             <p><%= commentText %></p>
         </li>
       </script>
@@ -167,7 +164,7 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/moment/moment.js"></script>
-    
+
     <!-- endbower -->
     <!-- endbuild -->
 
