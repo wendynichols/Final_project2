@@ -63,7 +63,7 @@
 
     <script type="text/template" id="postsList">
       <li class="" id="<%= objectId %>">
-        <a href="#/single/<%= objectId %>"><h2><%= title %></h2></a>
+        <a href="#/single/<%= objectId %>"><div id='singleTitle'><%= title %></div></a>
           <span class="postDetails">
           <span><%= user.picture %></span>
 
@@ -74,7 +74,7 @@
     </script>
 
       <script type="text/template" id="singlePost">
-        <h2 id="singleTitle"><%= title %></h2>
+        <div id="singlePostTitle"><%= title %></div>
           <a id="postAuthor" href="#/author/<%= user.objectId %>"> by <%= name %></a>
             <p id="singleCopy"><%= objectId.picture %></p>
               <h3 class="commentHeader">Comments on "<%= title %>"</h3>

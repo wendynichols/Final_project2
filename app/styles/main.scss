@@ -147,6 +147,7 @@ nav {
 }
 
 .footer {
+  margin-top: 25px;
   width: 100%;
   height: 100px;
   background: url('http://www.designlovefest.com/wp-content/uploads/downloads/2014/07/WatercolorFloralBorder_by_JulieSongInk1.jpg');
@@ -196,10 +197,14 @@ nav {
 // Single Post
 
 #singleTitle {
-  text-align: center;
   color: $green;
+  font-size: 2.5em;
 }
-
+#singlePostTitle {
+  color: $green;
+  font-size: 2.5em;
+  text-align: center;
+}
 #singleCopy {
   text-align: justify;
 }
@@ -303,7 +308,6 @@ nav {
 }
 
 #publish, #draft {
-  //@include span-columns(2);
   margin-top: 10px;
   margin-bottom: 100px;
   margin-left: 7px;
@@ -321,9 +325,7 @@ nav {
   }
 
 }
-
 @media (max-width: 600px){
-
   nav {
 
     h1 {
@@ -339,7 +341,6 @@ nav {
       padding: 6px 14px;
     }
   }
-
   .allPosts {
     text-align: center;
 
@@ -350,27 +351,6 @@ nav {
       margin-top: 16px;
     }
   }
-
-/*   .createForm {
-  text-align: center;
-
-  .catButtons {
-    @include span-columns(6);
-
-    button {
-      @include span-columns(6 of 6);
-      margin: 0;
-    }
-  }
-
-  .catSelect {
-    @include span-columns(6);
-  }
-
-  button {
-    padding: 6px 14px;
-  }
-} */
 
   #title {
     @include span-columns(12);
