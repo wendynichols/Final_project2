@@ -148,9 +148,16 @@ nav {
 
 .footer {
   margin-top: 25px;
+  padding-top: 40px;
   width: 100%;
   height: 100px;
   background: url('http://www.designlovefest.com/wp-content/uploads/downloads/2014/07/WatercolorFloralBorder_by_JulieSongInk1.jpg');
+
+  .copyright {
+    font-size: 1.3em;
+    margin-left: 200px;
+    font-weight: bold;
+  }
 
 }
 // Public Posts
